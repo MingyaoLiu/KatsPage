@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  rewrites() {
+    return [
+      {
+        source: "/ink-material-database",
+        destination: "/ink-material-database.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
