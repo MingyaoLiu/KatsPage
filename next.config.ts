@@ -2,12 +2,18 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   rewrites() {
-    return [
-      {
-        source: "/ink-material-database",
-        destination: "/ink-material-database.html",
-      },
-    ];
+    return {
+      beforeFiles: [
+        {
+          source: "/",
+          destination: "/ink-material-database.html",
+        },
+        {
+          source: "/ink-material-database",
+          destination: "/ink-material-database.html",
+        },
+      ],
+    };
   },
 };
 
